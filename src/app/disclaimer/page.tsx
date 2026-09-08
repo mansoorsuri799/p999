@@ -1,147 +1,129 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import CtaButton from '@/components/CtaButton';
+import type { Metadata } from "next";
+import Link from "next/link";
+import CtaButton from "@/components/CtaButton";
+import { SUPPORT_EMAIL } from "@/lib/appFacts";
+import { SITE_ORIGIN } from "@/lib/schemaImageLicensing";
+
+const pageUrl = `${SITE_ORIGIN}/disclaimer`;
 
 export const metadata: Metadata = {
-  title: 'Disclaimer - Card Rummy | Legal Information',
-  description: 'Read the disclaimer for Card Rummy. Important legal information about the use of this blog and third-party platforms.',
-  keywords: ['Card Rummy disclaimer', 'legal disclaimer', 'terms', 'conditions', 'gambling disclaimer'],
+  title: "Disclaimer - P999",
+  description:
+    "Important P999 disclaimer: 18+ only, entertainment risk, no income guarantee, user responsibility, and local law reminders.",
+  keywords: ["P999 disclaimer", "P999 risk warning", "P999 18+", "P999 no income guarantee"],
+  alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'Disclaimer - Card Rummy',
-    description: 'Legal disclaimer and important information about Card Rummy.',
-    url: 'https://cardrummyapp.com.pk/disclaimer',
-    siteName: 'Card Rummy',
-    type: 'website',
+    title: "Disclaimer - P999",
+    description: "Legal and responsible gaming disclaimer for P999 and p999gaming.com.pk.",
+    url: pageUrl,
+    siteName: "P999",
+    type: "website",
   },
   twitter: {
-    card: 'summary',
-    title: 'Disclaimer - Card Rummy',
-    description: 'Legal disclaimer and important information about Card Rummy.',
+    card: "summary",
+    title: "Disclaimer - P999",
+    description: "18+ only, no income guarantee, and entertainment risk notice.",
   },
-  alternates: {
-    canonical: 'https://cardrummyapp.com.pk/disclaimer',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  }
+  robots: { index: true, follow: true },
+};
+
+const warnings = [
+  ["18+ Only", "P999 content is intended only for adults who are at least 18 years old."],
+  ["Entertainment Risk", "Real-money gaming can lead to financial loss. Play only with money you can afford to lose."],
+  ["No Income Guarantee", "P999 should not be treated as a job, investment, or reliable earning source."],
+  ["Local Law Responsibility", "You are responsible for checking whether online gaming or real-money play is allowed in your location."],
+  ["Third-Party Services", "Wallet providers, app operators, and external services may have their own rules and processing timelines."],
+];
+
+const breadcrumbData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_ORIGIN },
+    { "@type": "ListItem", position: 2, name: "Disclaimer", item: pageUrl },
+  ],
 };
 
 export default function Disclaimer() {
   return (
-    <div className="min-h-screen bg-primary py-12 px-4">
+    <article className="min-h-screen bg-primary py-12 px-4">
       <div className="container mx-auto">
         <div className="max-w-4xl mx-auto">
-          {/* Hero Section */}
+          <nav className="mb-8 text-sm text-gray-400" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-accent">Home</Link>
+            <span className="mx-2">/</span>
+            <span className="text-accent">Disclaimer</span>
+          </nav>
+
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Disclaimer</h1>
-            <p className="text-lg text-gray-400">Please read this disclaimer carefully before using our website</p>
+            <p className="text-lg text-gray-400">Please read this before using P999 guides or making any gaming decision.</p>
           </div>
-          
-          {/* Main Content */}
+
           <div className="bg-secondary rounded-2xl shadow-xl p-8 md:p-12">
-            <div className="prose prose-lg max-w-none">
-              {/* Warning Banner */}
-              <div className="bg-[#0A1029] border-l-4 border-accent p-6 mb-8 rounded-r-lg">
-                <div className="flex items-start">
-                  <svg className="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd"></path>
-                  </svg>
-                  <div>
-                    <h3 className="text-xl font-bold text-accent mb-2">Important Notice</h3>
-                    <p className="text-accent mb-0">
-                      Please read this disclaimer carefully. By using this website, you agree to the terms outlined below.
-                    </p>
+            <div className="bg-[#07140C] border-l-4 border-accent p-6 mb-8 rounded-r-lg">
+              <h2 className="text-xl font-bold text-accent mb-2">Important Notice</h2>
+              <p className="text-gray-300">
+                p999gaming.com.pk provides informational guide content about <Link href="/" className="text-accent hover:underline font-semibold">P999</Link>. By using this website, you accept the risk notes and user responsibilities below.
+              </p>
+            </div>
+
+            <div className="space-y-6 text-gray-300">
+              <p className="text-lg leading-relaxed">
+                P999 may involve real-money entertainment features depending on the app version and user account. We do not guarantee deposits, withdrawals, bonuses, profit, income, or any specific gameplay result.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {warnings.map(([title, body]) => (
+                  <div key={title} className="bg-[#07140C] rounded-xl p-6 border border-accent/30">
+                    <h2 className="text-2xl font-bold mb-4 text-white">{title}</h2>
+                    <p className="text-gray-300 leading-relaxed">{body}</p>
                   </div>
-                </div>
+                ))}
               </div>
 
-              {/* Main Disclaimer Content */}
-              <div className="space-y-6 text-gray-300">
-                <p className="text-lg leading-relaxed">
-                  The information provided on this blog (<a href="https://www.cardrummyapp.com.pk" className="text-accent hover:text-accent font-semibold" target="_blank" rel="noopener noreferrer">www.cardrummyapp.com.pk</a>) about <Link href="/" className="text-accent hover:underline font-semibold">Card Rummy</Link> is for <strong>general informational and entertainment purposes only</strong>. We do not host, promote, or encourage any form of gambling or betting activities.
+              <div className="bg-[#07140C] rounded-xl p-6 border border-red-500/40">
+                <h2 className="text-2xl font-bold mb-4 text-red-300">No Liability</h2>
+                <p className="text-gray-300 leading-relaxed">
+                  We are not responsible for financial loss, account issues, app downtime, wallet delays, legal consequences, or decisions made after reading this website. Use the app and any linked services at your own discretion.
                 </p>
-
-                <div className="bg-[#0A1029] rounded-xl p-6 border border-accent">
-                  <h2 className="text-2xl font-bold mb-4 text-white">⚠️ Important Warnings</h2>
-                  <ul className="space-y-3 text-gray-300">
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2 font-bold">•</span>
-                      <span>Card Rummy is a card game that may involve <strong>real money</strong> when played on certain platforms.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2 font-bold">•</span>
-                      <span>Users are advised to be aware of their <strong>local laws and regulations</strong> related to online gaming and gambling before engaging with any app or website mentioned.</span>
-                    </li>
-              </ul>
-                </div>
-
-                <div className="bg-[#0A1029] rounded-xl p-6 border border-red-200">
-                  <h2 className="text-2xl font-bold mb-4 text-red-400">🚫 No Liability</h2>
-                  <p className="text-gray-300 leading-relaxed mb-0">
-                    We are <strong>not responsible</strong> for any loss, risk, or legal issues resulting from the use of third-party platforms. All app names, logos, and trademarks belong to their respective owners, and we do not claim any affiliation or endorsement.
-                  </p>
-                </div>
-
-                <div className="bg-[#0A1029] rounded-xl p-6 border border-blue-200">
-                  <h2 className="text-2xl font-bold mb-4 text-blue-400">📋 User Responsibility</h2>
-                  <p className="text-gray-300 leading-relaxed mb-0">
-                    By using this blog, you agree that any actions you take based on the content are <strong>strictly at your own risk</strong>. We encourage all users to:
-                  </p>
-                  <ul className="mt-4 space-y-2 text-gray-300">
-                    <li className="flex items-start">
-                      <span className="text-blue-600 mr-2">✓</span>
-                      <span>Verify local laws before engaging with any gaming platform</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-600 mr-2">✓</span>
-                      <span>Play responsibly and within your means</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-600 mr-2">✓</span>
-                      <span>Be aware of the risks involved in real money gaming</span>
-                </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-600 mr-2">✓</span>
-                      <span>Seek professional help if you have gambling concerns</span>
-                </li>
-              </ul>
-                </div>
-
-                <div className="bg-[#0A1029] rounded-xl p-6 border border-accent">
-                  <h2 className="text-2xl font-bold mb-4 text-white">™️ Trademarks & Affiliations</h2>
-                  <p className="text-gray-300 leading-relaxed mb-0">
-                    All app names, logos, and trademarks mentioned on this website belong to their respective owners. We do not claim any affiliation, endorsement, or partnership with any of the apps or platforms mentioned on this blog.
-                  </p>
-                </div>
               </div>
 
-              {/* Contact Section */}
-              <div className="mt-12 p-6 bg-secondary rounded-xl border-2 border-accent">
-                <h2 className="text-2xl font-bold mb-4 text-white">Questions?</h2>
-                <p className="text-gray-300 mb-4">
-                  If you have any questions about this Disclaimer, please feel free to contact us.
-                </p>
-                <CtaButton href="/contact-us" icon="arrow">Contact Us</CtaButton>
+              <div className="bg-[#07140C] rounded-xl p-6 border border-accent/30">
+                <h2 className="text-2xl font-bold mb-4 text-white">Responsible Use</h2>
+                <ul className="space-y-3 text-gray-300">
+                  <li>Set a budget before playing and stop when that limit is reached.</li>
+                  <li>Do not borrow money or use emergency funds for gaming.</li>
+                  <li>Take breaks and avoid chasing losses.</li>
+                  <li>Seek professional help if gaming affects your finances, mood, or relationships.</li>
+                </ul>
               </div>
+            </div>
+
+            <div className="mt-12 p-6 bg-[#07140C] rounded-xl border-2 border-accent/40">
+              <h2 className="text-2xl font-bold mb-4 text-white">Questions?</h2>
+              <p className="text-gray-300 mb-4">
+                Contact us at <a href={`mailto:${SUPPORT_EMAIL}`} className="text-accent hover:underline">{SUPPORT_EMAIL}</a> if you need clarification about this disclaimer.
+              </p>
+              <CtaButton href="/contact-us" icon="arrow">Contact Us</CtaButton>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Disclaimer - Card Rummy",
-            "description": "Legal disclaimer and important information about Card Rummy website.",
-            "url": "https://cardrummyapp.com.pk/disclaimer"
-          })
+            name: "Disclaimer - P999",
+            description: "18+ responsible gaming and no income guarantee disclaimer for P999.",
+            url: pageUrl,
+          }).replace(/</g, "\\u003c"),
         }}
       />
-    </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData).replace(/</g, "\\u003c") }} />
+    </article>
   );
-} 
+}

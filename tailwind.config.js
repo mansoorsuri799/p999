@@ -8,11 +8,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#06091F',
-        accent: '#FFC107',
+        // P999 icon palette — deep forest green (no blue navy)
+        primary: '#07140C',
+        secondary: '#0C1F14',
+        accent: '#2DD46F',
       },
     },
   },
   plugins: [],
 }
-

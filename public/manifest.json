@@ -1,11 +1,11 @@
 {
-  "name": "Card Rummy",
-  "short_name": "Card Rummy",
-  "description": "Pakistan's premier card gaming platform offering Teen Patti, Rummy, Dragon vs Tiger and more. Earn real cash rewards!",
+  "name": "P999",
+  "short_name": "P999",
+  "description": "P999 Game – online gaming APK for Pakistan with Teen Patti, Rummy, slots, JazzCash & EasyPaisa.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#06091F",
-  "theme_color": "#06091F",
+  "background_color": "#07140C",
+  "theme_color": "#07140C",
   "icons": [
     {
       "src": "/favicon.ico",
@@ -13,10 +13,10 @@
       "type": "image/x-icon"
     },
     {
-      "src": "/card-rummy.webp",
+      "src": "/p999.webp",
       "sizes": "512x512",
       "type": "image/webp",
       "purpose": "any maskable"
     }
   ]
-} 
+}

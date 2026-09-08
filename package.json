@@ -1,12 +1,12 @@
 {
-  "name": "cardrummyapp",
+  "name": "p999gaming",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "critters": "^0.0.23",

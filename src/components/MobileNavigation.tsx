@@ -2,10 +2,10 @@
 
 import { useState, useEffect, useTransition } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useMobileMenu } from './MobileMenuProvider';
 import CtaButton from './CtaButton';
+import BrandLogo from './BrandLogo';
 
 type NavItem = {
   href: string;
@@ -38,7 +38,7 @@ const navSections: NavSection[] = [
         ),
       },
       {
-        href: '/download-card-rummy',
+        href: '/download-p999-game',
         label: 'Download',
         icon: (
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -52,7 +52,7 @@ const navSections: NavSection[] = [
     title: 'GUIDES',
     items: [
       {
-        href: '/deposit-money-in-card-rummy',
+        href: '/deposit-money-in-p999',
         label: 'Deposit Guide',
         icon: (
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -61,7 +61,7 @@ const navSections: NavSection[] = [
         ),
       },
       {
-        href: '/withdraw-money-from-card-rummy',
+        href: '/withdraw-money-from-p999',
         label: 'Withdraw Guide',
         icon: (
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -70,7 +70,7 @@ const navSections: NavSection[] = [
         ),
       },
       {
-        href: '/card-rummy-for-pc',
+        href: '/p999-for-pc',
         label: 'PC Version',
         icon: (
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -98,6 +98,24 @@ const navSections: NavSection[] = [
         icon: (
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+          </svg>
+        ),
+      },
+      {
+        href: '/blog/is-p999-game-real-or-fake',
+        label: 'Is P999 Real or Fake?',
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+        ),
+      },
+      {
+        href: '/blog/p999-beginner-guide-pakistan',
+        label: 'Beginner Guide',
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25A8.966 8.966 0 0 1 18 3.75c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
           </svg>
         ),
       },
@@ -180,21 +198,12 @@ export default function MobileNavigation() {
       <MenuButton onClick={toggleMenu} isOpen={isOpen} />
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex flex-col bg-[#080A21]">
+        <div className="fixed inset-0 z-50 flex flex-col bg-[#07140C]">
           {/* Header */}
           <div className="flex justify-between items-center px-5 py-4 border-b border-gray-800/80">
             <Link href="/" className="flex items-center gap-3" onClick={closeMenu}>
-              <div className="relative w-9 h-9 flex-shrink-0 rounded-lg overflow-hidden">
-                <Image
-                  src="/card-rummy.webp"
-                  alt="Card Rummy Logo"
-                  fill
-                  sizes="36px"
-                  className="object-contain"
-                  priority
-                />
-              </div>
-              <span className="text-white text-lg font-bold tracking-tight">Card Rummy</span>
+              <BrandLogo size="sm" priority alt="P999 Logo" />
+              <span className="text-white text-lg font-bold tracking-tight">P999</span>
             </Link>
             <button
               onClick={closeMenu}
@@ -216,7 +225,7 @@ export default function MobileNavigation() {
 
           {/* Nav sections */}
           <div className="relative flex-1 overflow-y-auto">
-            <div className="absolute right-0 top-0 bottom-0 w-1 bg-[#0BA5E9]" aria-hidden="true" />
+              <div className="absolute right-0 top-0 bottom-0 w-1 bg-accent" aria-hidden="true" />
 
             <nav className="px-5 py-2 pb-6">
               {navSections.map((section) => (
@@ -259,11 +268,11 @@ export default function MobileNavigation() {
 
           {/* Footer CTA */}
           <div className="px-5 pt-4 pb-8 border-t border-gray-800/80 flex flex-col items-center">
-            <CtaButton onClick={closeMenu} ariaLabel="Download Card Rummy app for Android">
-              DOWNLOAD NOW
+            <CtaButton onClick={closeMenu} ariaLabel="Download P999 Game APK for Android">
+              DOWNLOAD P999
             </CtaButton>
             <p className="text-center text-gray-500 text-xs mt-3">
-              49MB · Android 5.0+ · V1.231 (2026 Update)
+              7.04MB · Android 5.0+ · v1.3
             </p>
           </div>
         </div>

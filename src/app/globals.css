@@ -4,8 +4,8 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 2, 6, 23;
-  --background-end-rgb: 2, 6, 23;
+  --background-start-rgb: 7, 20, 12;
+  --background-end-rgb: 7, 20, 12;
 }
 
 body {
@@ -69,7 +69,7 @@ footer {
 }
 
 .stat-card {
-  background: rgba(10, 16, 41, 0.8);
+  background: rgba(12, 31, 20, 0.9);
   border-radius: 0.75rem;
   padding: 1.5rem;
   transition: all 0.3s ease;
@@ -83,4 +83,32 @@ footer {
 /* Prevent layout shift by ensuring content takes up space */
 .stars-bg {
   pointer-events: none;
+}
+
+/* Mobile phone mockup for app screenshots — removes square/white corner look */
+.phone-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.75rem;
+  background: #050d08;
+  border: 3px solid #1a3324;
+  box-shadow:
+    0 0 0 1px rgba(45, 212, 111, 0.15),
+    0 18px 40px rgba(0, 0, 0, 0.45);
+  aspect-ratio: 9 / 19.5;
+}
+
+.phone-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* Logo: hide any residual fringe against dark pages */
+.logo-clean {
+  background: transparent;
+  border-radius: 1.25rem;
+  overflow: hidden;
 } 

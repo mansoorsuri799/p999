@@ -1,49 +1,42 @@
-import { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
-import Script from 'next/script';
-import { FACEBOOK_PROFILE_URL } from '@/lib/appFacts';
-import CtaButton from '@/components/CtaButton';
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import Script from "next/script";
+import CtaButton from "@/components/CtaButton";
+import { ORGANIZATION_JSON_LD, SUPPORT_EMAIL } from "@/lib/appFacts";
+import { SITE_ORIGIN } from "@/lib/schemaImageLicensing";
+
+const pageUrl = `${SITE_ORIGIN}/about-us`;
 
 export const metadata: Metadata = {
-  title: 'About Card Rummy - Pakistan\'s Premier Card Gaming Platform',
-  description: 'Learn about Card Rummy, our history, mission, and vision for creating the best card gaming platform in Pakistan with Teen Patti, Rummy and more.',
-  keywords: ['Card Rummy about', 'about us', 'gaming company Pakistan', 'Card Rummy history', 'card gaming platform', 'Teen Patti', '3 Patti'],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  alternates: {
-    canonical: "https://cardrummyapp.com.pk/about-us",
-  },
+  title: "About P999 - p999gaming.com.pk",
+  description:
+    "Learn about P999 and p999gaming.com.pk, our editorial standards, Pakistan-focused gaming guides, safety notes, and support contact.",
+  keywords: ["about P999", "p999gaming.com.pk", "P999 Pakistan", "P999 support"],
+  alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'About Card Rummy - Pakistan\'s Premier Card Gaming Platform',
-    description: 'Learn about Card Rummy, our history, mission, and vision for creating the best card gaming platform in Pakistan with real cash rewards.',
-    url: "https://cardrummyapp.com.pk/about-us",
-    siteName: "Card Rummy",
-    locale: "en_US",
+    title: "About P999 - p999gaming.com.pk",
+    description: "About P999, our Pakistan-focused app guides, trust standards, and responsible gaming information.",
+    url: pageUrl,
+    siteName: "P999",
     type: "website",
-    images: [
-      {
-        url: "https://cardrummyapp.com.pk/feature/og-image.webp",
-        width: 512,
-        height: 512,
-        alt: "About Card Rummy - Premier Card Gaming Platform",
-      }
-    ],
+    images: [{ url: `${SITE_ORIGIN}/feature/og-image.webp`, width: 512, height: 512, alt: "About P999" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: 'About Card Rummy - Pakistan\'s Premier Card Gaming Platform',
-    description: 'Learn about Card Rummy, our history, mission, and vision for creating the best card gaming platform in Pakistan with real cash rewards.',
-    images: ["https://cardrummyapp.com.pk/feature/twitter-card.webp"],
+    title: "About P999",
+    description: "About p999gaming.com.pk and our P999 app guide standards.",
+    images: [`${SITE_ORIGIN}/feature/twitter-card.webp`],
   },
+};
+
+const breadcrumbData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_ORIGIN },
+    { "@type": "ListItem", position: 2, name: "About Us", item: pageUrl },
+  ],
 };
 
 export default function AboutPage() {
@@ -51,21 +44,26 @@ export default function AboutPage() {
     <article className="min-h-screen bg-primary py-12 px-4">
       <div className="container mx-auto">
         <div className="max-w-4xl mx-auto">
-          {/* Hero Section */}
+          <nav className="mb-8 text-sm text-gray-400" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-accent">Home</Link>
+            <span className="mx-2">/</span>
+            <span className="text-accent">About Us</span>
+          </nav>
+
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">About Us</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">About P999</h1>
+            <p className="text-lg text-gray-400">Pakistan-focused P999 guides, app information, and responsible gaming notes.</p>
           </div>
-          
-          {/* Main Content */}
+
           <div className="bg-secondary rounded-2xl shadow-xl p-8 md:p-12 mb-12">
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-20 mb-8">
               <div className="w-full md:w-1/3 flex-shrink-0 flex justify-center md:justify-start">
                 <Link href="/" className="block">
-                  <div className="relative w-[280px] h-[280px] md:w-[320px] md:h-[320px] mx-auto md:mx-0 rounded-lg overflow-hidden bg-[#0A1029]">
-                    <Image 
-                      src="/card-rummy.webp" 
-                      alt="Card Rummy – Pakistan's Premier Card Gaming Platform"
-                      title="About Card Rummy – Pakistan's #1 Card Game App"
+                  <div className="relative w-[280px] h-[280px] md:w-[320px] md:h-[320px] mx-auto md:mx-0 rounded-lg overflow-hidden bg-[#07140C]">
+                    <Image
+                      src="/p999-icon.webp"
+                      alt="P999 official app logo"
+                      title="About P999"
                       width={320}
                       height={320}
                       sizes="(max-width: 768px) 280px, 320px"
@@ -76,32 +74,36 @@ export default function AboutPage() {
                 </Link>
               </div>
               <div className="md:w-2/3 md:pl-4 lg:pl-6">
-                <div className="prose prose-lg max-w-none">
-                  <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                    Welcome to <a href="https://www.cardrummyapp.com.pk/" className="text-accent hover:text-accent font-semibold" target="_blank" rel="noopener noreferrer">www.cardrummyapp.com.pk</a>, a trusted platform to provide the latest information about 3patti <Link href="/" className="text-accent hover:underline font-semibold">Card Rummy</Link>. This is one of the most popular online casino games in Pakistan, having <span className="font-bold text-accent">500K+ users</span>. <a href="https://pkcardrummy.com/?from_gameid=6276686&channelCode=6191689" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline font-semibold">Download Card Rummy</a> now to join thousands of players earning real cash rewards.
-                  </p>
-                  <p className="text-lg text-gray-300 leading-relaxed">
-                    Hundreds of people are playing these wonderful games and earning a handsome amount on a daily or weekly basis.
-                  </p>
-                </div>
+                <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                  <Link href="/" className="text-accent hover:underline font-semibold">P999</Link> is covered on p999gaming.com.pk as an Android gaming app guide for Pakistani users. Our pages explain APK installation, JazzCash and EasyPaisa payments, PC emulator setup, account basics, and safety checks in plain language.
+                </p>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  We write for adults who want practical information before downloading or using a real-money entertainment app. We do not promise earnings, and we encourage every reader to check local rules, set limits, and treat gaming as entertainment.
+                </p>
               </div>
             </div>
           </div>
-          
-          {/* Our Aim Section */}
-          <div className="bg-gradient-to-r from-orange-600 to-orange-500 rounded-2xl shadow-xl p-8 md:p-12 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white text-center">Our Aim!</h2>
-            <p className="text-lg md:text-xl text-white leading-relaxed text-center">
-              Our aim is to provide the users with the latest and updated information and earning tips about Card Rummy. For any type of information or query, you can visit our <Link href="/contact-us" className="underline hover:text-orange-100 font-semibold">contact us page</Link>.
-            </p>
+
+          <div className="bg-secondary rounded-2xl shadow-xl p-8 md:p-12 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-accent text-center">Our E-E-A-T Standards</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                ["Experience", "We focus on user journeys such as downloading, installing, depositing, withdrawing, and troubleshooting common wallet issues."],
+                ["Expertise", "Guides are organized around Android APK behavior, Pakistani mobile wallets, emulator setup, and responsible gaming risk."],
+                ["Authoritativeness", "We keep brand, domain, contact, schema, and page metadata consistent across p999gaming.com.pk."],
+                ["Trust", `Every trust page links to support at ${SUPPORT_EMAIL} and avoids guaranteed-income claims.`],
+              ].map(([title, body]) => (
+                <div key={title} className="bg-[#07140C] rounded-xl p-6 border-l-4 border-accent">
+                  <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+                  <p className="text-gray-300">{body}</p>
+                </div>
+              ))}
+            </div>
           </div>
-          
-          {/* Contact CTA */}
+
           <div className="bg-secondary rounded-2xl shadow-xl p-8 text-center">
             <h2 className="text-2xl font-bold mb-4 text-white">Have Questions?</h2>
-            <p className="text-gray-300 mb-6 text-lg">
-              We're here to help! Contact our team for any information or queries about Card Rummy.
-            </p>
+            <p className="text-gray-300 mb-6 text-lg">Contact us about P999 guides, corrections, privacy requests, or responsible gaming concerns.</p>
             <CtaButton href="/contact-us" icon="arrow">Contact Us</CtaButton>
           </div>
         </div>
@@ -114,51 +116,12 @@ export default function AboutPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "AboutPage",
-            "mainEntity": {
-              "@type": "Organization",
-              "name": "Card Rummy",
-              "alternateName": "3 Patti Card Rummy",
-              "url": "https://cardrummyapp.com.pk",
-              "logo": "https://cardrummyapp.com.pk/card-rummy.webp",
-              "description": "Card Rummy is Pakistan's premier card gaming platform, offering Teen Patti, Rummy, Dragon vs Tiger and more with real cash rewards.",
-              "foundingDate": "2024",
-              "foundingLocation": {
-                "@type": "Country",
-                "name": "Pakistan"
-              },
-              "sameAs": [
-                FACEBOOK_PROFILE_URL
-              ],
-              "founder": {
-                "@type": "Person",
-                "name": "Erio Card Rummy Dev"
-              }
-            },
-            "about": {
-              "@type": "Thing",
-              "name": "Card Gaming Platform",
-              "description": "Online card gaming platform with real cash rewards serving Pakistani users"
-            },
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://cardrummyapp.com.pk/about-us"
-            }
-          })
+            mainEntity: ORGANIZATION_JSON_LD,
+            mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
+          }).replace(/</g, "\\u003c"),
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cardrummyapp.com.pk" },
-              { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://cardrummyapp.com.pk/about-us" }
-            ]
-          })
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData).replace(/</g, "\\u003c") }} />
     </article>
   );
-} 
+}

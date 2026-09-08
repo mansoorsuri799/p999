@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
-export const DOWNLOAD_URL =
-  'https://pkcardrummy.com/?from_gameid=6276686&channelCode=6191689';
+export const DOWNLOAD_URL = 'https://p999gaming.com.pk/download-p999-game';
 
 type IconKind = 'download' | 'arrow' | 'mail';
 
@@ -18,24 +17,24 @@ type CtaButtonProps = {
 
 const ICONS: Record<IconKind, React.ReactNode> = {
   download: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
     </svg>
   ),
   arrow: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
     </svg>
   ),
   mail: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
     </svg>
   ),
 };
 
 const baseClass =
-  'download-btn inline-flex items-center justify-center px-8 py-4 text-white font-semibold text-lg rounded-full border-2 border-[#0BA5E9] bg-transparent hover:bg-[#0BA5E9]/10 transition-all group';
+  'download-btn inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 sm:px-8 sm:py-4 text-white font-semibold text-sm sm:text-lg rounded-full border-2 border-[#FACC15] bg-transparent hover:bg-[#FACC15]/10 transition-all group';
 
 function ButtonInner({
   children,
@@ -47,7 +46,7 @@ function ButtonInner({
   return (
     <>
       <span className="text-left leading-tight">{children}</span>
-      <div className="download-icon ml-3 bg-[#f97316] rounded-full p-2 group-hover:scale-110 transition-transform text-white">
+      <div className="download-icon ml-2 sm:ml-3 bg-[#EC4899] rounded-full p-1.5 sm:p-2 group-hover:scale-110 transition-transform text-white">
         {ICONS[icon]}
       </div>
     </>

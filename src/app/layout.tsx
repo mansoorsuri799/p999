@@ -24,118 +24,103 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: "#06091F",
+  themeColor: "#07140C",
   viewportFit: "cover",
   interactiveWidget: "resizes-visual",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://cardrummyapp.com.pk'),
+  metadataBase: new URL("https://p999gaming.com.pk"),
   title: {
-    default: "Card Rummy Pakistan v1.231 Free Download Official APK",
-    template: "%s | Card Rummy"
+    default: "P999 Game Download APK | Real Money App Pakistan 2026",
+    template: "%s | P999",
   },
-  description: "Card Rummy 2026 - Pakistan's #1 card game platform. Download Card Rummy APK, play Teen Patti, Rummy, Dragon vs Tiger & win real cash. Fast withdrawals via JazzCash & EasyPaisa. Join 500K+ players!",
+  description:
+    "Download P999 Game APK for Android in Pakistan. Play Teen Patti, Rummy & slots with JazzCash and EasyPaisa. Free v1.3 APK, 7.04MB, 24/7 support.",
   keywords: [
-    "Card Rummy",
-    "card rummy game",
-    "card rummy download",
-    "card rummy app",
-    "card rummy apk",
-    "card rummy pakistan",
-    "card rummy online",
-    "download card rummy",
-    "card rummy real money",
-    "3 Patti Card Rummy",
-    "how to play card rummy",
-    "card rummy 2026",
-    "Pakistan card games",
-    "Teen Patti game",
-    "online rummy game",
-    "earn money playing cards",
-    "Android gaming app 2026",
-    "JazzCash gaming",
-    "EasyPaisa gaming",
-    "mobile card games",
+    "P999",
+    "P999 Game",
+    "P999 Game download",
+    "P999 APK",
+    "P999 Game APK",
+    "P999 Pakistan",
+    "P999 login",
+    "P999 Game real money",
+    "download P999",
+    "P999 JazzCash",
+    "P999 EasyPaisa",
     "real money games Pakistan",
-    "card game earning app",
-    "Teen Patti online",
-    "Dragon vs Tiger",
-    "best earning app Pakistan",
-    "rummy card game",
-    "play rummy online",
-    "rummy game download"
+    "Teen Patti Pakistan",
+    "online earning game APK",
   ],
-  authors: [{ name: "Card Rummy Team" }],
-  creator: "Card Rummy",
-  publisher: "Card Rummy",
+  authors: [{ name: "P999 Team" }],
+  creator: "P999",
+  publisher: "P999",
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   icons: {
     icon: [
-      { url: '/favicon.ico', type: 'image/x-icon', sizes: '256x256' },
-      { url: '/card-rummy.webp', type: 'image/webp', sizes: '512x512' }
+      { url: "/favicon.ico", type: "image/x-icon", sizes: "256x256" },
+      { url: "/p999.webp", type: "image/webp", sizes: "512x512" },
     ],
-    apple: [
-      { url: '/apple-icon.png', sizes: '180x180' }
-    ],
-    shortcut: [
-      { url: '/favicon.ico', type: 'image/x-icon' }
-    ]
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
+    shortcut: [{ url: "/favicon.ico", type: "image/x-icon" }],
   },
   verification: {
     google: "8a7c21f6e90a89ef",
   },
   alternates: {
-    canonical: "https://cardrummyapp.com.pk",
+    canonical: "https://p999gaming.com.pk",
   },
   openGraph: {
-    title: "Card Rummy Pakistan v1.231 Free Download Official APK",
-    description: "Card Rummy 2026 - Pakistan's #1 card game platform. Join 500K+ players. Play Teen Patti, Rummy & more. Earn real money with JazzCash & EasyPaisa. Download now!",
-    url: "https://cardrummyapp.com.pk",
-    siteName: "Card Rummy",
+    title: "P999 Game Download APK | Real Money App Pakistan 2026",
+    description:
+      "Download P999 Game APK for Android. JazzCash & EasyPaisa support, Teen Patti, Rummy, slots, and daily bonuses for Pakistan players.",
+    url: "https://p999gaming.com.pk",
+    siteName: "P999",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://cardrummyapp.com.pk/feature/og-image.webp",
+        url: "https://p999gaming.com.pk/feature/og-image.webp",
         width: 512,
         height: 512,
-        alt: "Card Rummy - Premier Card Gaming Platform",
+        alt: "P999 Game – Real money gaming app for Pakistan",
       },
       {
-        url: "https://cardrummyapp.com.pk/feature/og-image-square.webp",
+        url: "https://p999gaming.com.pk/feature/og-image-square.webp",
         width: 512,
         height: 512,
-        alt: "Card Rummy - Premier Card Gaming Platform",
-      }
+        alt: "P999 Game official logo",
+      },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Card Rummy Pakistan v1.231 Free Download Official APK",
-    description: "Card Rummy 2026 - Pakistan's #1 card game platform. Join 500K+ players. Play Teen Patti, Rummy & more. Earn real money with JazzCash & EasyPaisa. Download now!",
+    title: "P999 Game Download APK | Real Money App Pakistan 2026",
+    description:
+      "Download P999 Game APK for Android. JazzCash & EasyPaisa support, Teen Patti, Rummy, slots, and daily bonuses for Pakistan players.",
     images: [
       {
-        url: "https://cardrummyapp.com.pk/feature/twitter-card.webp",
+        url: "https://p999gaming.com.pk/feature/twitter-card.webp",
         width: 512,
         height: 512,
-        alt: "Card Rummy - Premier Card Gaming Platform",
-      }
+        alt: "P999 Game – Real money gaming app for Pakistan",
+      },
     ],
   },
-  applicationName: "Card Rummy",
+  applicationName: "P999",
   category: "Gaming",
-  classification: "Card Gaming Platform",
+  classification: "Online Gaming Platform",
 };
 
 export default function RootLayout({
@@ -150,10 +135,9 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="256x256" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="/card-rummy.webp" type="image/webp" sizes="512x512" />
+        <link rel="icon" href="/p999.webp" type="image/webp" sizes="512x512" />
         <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180" />
-        
-        {/* Defer manifest to avoid critical path (374ms latency) - load after page interactive */}
+
         <Script id="deferred-manifest" strategy="lazyOnload">
           {`(function(){var l=document.createElement('link');l.rel='manifest';l.href='/manifest.json';document.head.appendChild(l);})();`}
         </Script>
@@ -161,18 +145,17 @@ export default function RootLayout({
       <body
         className={`${poppins.className} antialiased bg-primary text-white min-h-screen flex flex-col`}
         style={{
-          backgroundImage: "radial-gradient(circle at 10% 20%, rgba(10, 16, 41, 0.4) 0%, rgba(6, 9, 31, 0.01) 90%)",
+          backgroundImage:
+            "radial-gradient(circle at 10% 20%, rgba(45, 212, 111, 0.08) 0%, rgba(7, 20, 12, 0.01) 90%)",
           backgroundAttachment: "fixed",
-          minHeight: "100vh"
+          minHeight: "100vh",
         }}
         suppressHydrationWarning
       >
         <div className="stars-bg fixed inset-0 z-0 opacity-20"></div>
         <MobileMenuProvider>
           <Header />
-          <main className="relative z-10">
-          {children}
-          </main>
+          <main className="relative z-10">{children}</main>
           <DeferredStyles />
           <Footer />
           <ScrollToTopWrapper />

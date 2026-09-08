@@ -1,267 +1,122 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
+
+const BASE = "https://p999gaming.com.pk";
+const TODAY = new Date().toISOString().slice(0, 10);
+
+type PageType = {
+  url: string;
+  lastMod: string;
+  changeFreq: string;
+  priority: number;
+  images?: Array<{ loc: string; title: string; caption: string }>;
+};
+
+const mainPages: PageType[] = [
+  {
+    url: "/",
+    lastMod: TODAY,
+    changeFreq: "daily",
+    priority: 1.0,
+    images: [
+      {
+        loc: "/p999.webp",
+        title: "P999 Game official logo",
+        caption: "P999 Game APK for Pakistan — Teen Patti, Rummy, slots with JazzCash & EasyPaisa.",
+      },
+    ],
+  },
+  {
+    url: "/download-p999-game",
+    lastMod: TODAY,
+    changeFreq: "weekly",
+    priority: 0.9,
+    images: [
+      {
+        loc: "/p999-game.webp",
+        title: "Download P999 Game APK",
+        caption: "Install the latest P999 Game APK for Android in Pakistan.",
+      },
+    ],
+  },
+  { url: "/deposit-money-in-p999", lastMod: TODAY, changeFreq: "weekly", priority: 0.9 },
+  { url: "/withdraw-money-from-p999", lastMod: TODAY, changeFreq: "weekly", priority: 0.9 },
+  {
+    url: "/p999-for-pc",
+    lastMod: TODAY,
+    changeFreq: "weekly",
+    priority: 0.9,
+    images: [
+      {
+        loc: "/p999.webp",
+        title: "P999 for PC",
+        caption: "Play P999 Game on PC using an Android emulator.",
+      },
+    ],
+  },
+  { url: "/about-us", lastMod: TODAY, changeFreq: "monthly", priority: 0.7 },
+  {
+    url: "/blog",
+    lastMod: TODAY,
+    changeFreq: "weekly",
+    priority: 0.8,
+  },
+  { url: "/contact-us", lastMod: TODAY, changeFreq: "monthly", priority: 0.7 },
+  { url: "/privacy", lastMod: TODAY, changeFreq: "yearly", priority: 0.6 },
+  { url: "/disclaimer", lastMod: TODAY, changeFreq: "yearly", priority: 0.6 },
+];
+
+const blogPosts: PageType[] = [
+  { url: "/blog/is-p999-game-real-or-fake", lastMod: "2026-04-10", changeFreq: "monthly", priority: 0.8 },
+  { url: "/blog/p999-bonuses-vip-redeem-codes", lastMod: "2026-04-10", changeFreq: "monthly", priority: 0.8 },
+  { url: "/blog/is-p999-safe-to-play-pakistan", lastMod: "2026-04-11", changeFreq: "monthly", priority: 0.8 },
+  { url: "/blog/p999-beginner-guide-pakistan", lastMod: "2026-04-11", changeFreq: "monthly", priority: 0.8 },
+];
+
+function escapeXml(s: string) {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
 
 export async function GET() {
-  const baseUrl = 'https://cardrummyapp.com.pk';
-  
-  // Define page type
-  type PageType = {
-    url: string;
-    lastMod: string;
-    changeFreq: string;
-    priority: number;
-    images?: Array<{
-      loc: string;
-      title: string;
-      caption: string;
-    }>;
-  };
-  
-  // Main pages with high priority
-  const mainPages: PageType[] = [
-    {
-      url: '/',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'daily',
-      priority: 1.0,
-      images: [
-        {
-          loc: '/card-rummy.webp',
-          title: 'Card Rummy - Official App Icon and Brand Image',
-          caption: "Card Rummy - Pakistan's #1 card game app. Play Teen Patti, Rummy, Dragon vs Tiger. Download Card Rummy APK for Android."
-        }
-      ]
-    },
-    {
-      url: '/download-card-rummy',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'weekly',
-      priority: 0.9,
-      images: [
-        {
-          loc: '/card-rummy.webp',
-          title: 'Download Card Rummy',
-          caption: 'Download Card Rummy APK for Android'
-        }
-      ]
-    },
-    {
-      url: '/deposit-money-in-card-rummy',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      url: '/withdraw-money-from-card-rummy',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      url: '/card-rummy-for-pc',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'weekly',
-      priority: 0.9,
-      images: [
-        {
-          loc: '/card-rummy.webp',
-          title: 'Card Rummy for PC',
-          caption: 'Play Card Rummy on PC using Android Emulator'
-        }
-      ]
-    },
-    {
-      url: '/about-us',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.7,
-      images: [
-        {
-          loc: '/card-rummy.webp',
-          title: 'About Card Rummy',
-          caption: 'Learn about Card Rummy gaming platform'
-        }
-      ]
-    },
-    {
-      url: '/blog',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'weekly',
-      priority: 0.8,
-      images: [
-        {
-          loc: '/card-rummy.webp',
-          title: 'Card Rummy Blog',
-          caption: 'Guides and tutorials for Card Rummy gaming platform'
-        }
-      ]
-    },
-    {
-      url: '/contact-us',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.7
-    },
-    {
-      url: '/privacy',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'yearly',
-      priority: 0.6
-    },
-    {
-      url: '/disclaimer',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'yearly',
-      priority: 0.6
-    }
-  ];
+  const pages = [...mainPages, ...blogPosts];
 
-  // Blog posts
-  const blogPosts: PageType[] = [
-    {
-      url: '/blog/is-card-rummy-real-or-fake',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/create-card-rummy-account-and-login',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/tips-to-win-big-in-card-rummy',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/ips-exceed-issue-card-rummy-how-to-fix',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/card-rummy-old-version-features-review-2026',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/card-rummy-latest-version-new-features-2026-updates',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/ways-to-earn-money-with-card-rummy-2026',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/card-rummy-referral-program',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/3patti-room-vs-card-rummy',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/how-to-use-card-rummy-app-pakistan-guide-2026',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/3patti-blue-vs-card-rummy',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/dragon-vs-tiger-andar-bahar-high-payout-games',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/3patti-lucky-vs-card-rummy',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/card-rummy-tips-10-smart-tricks',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/3patti-gold-vs-card-rummy',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/card-rummy-app-review-2026',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/card-rummy-bonuses-vip-guide',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/responsible-gaming-guide-card-rummy',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: '/blog/is-card-rummy-safe-legal-pakistan',
-      lastMod: new Date().toISOString(),
-      changeFreq: 'monthly',
-      priority: 0.8
-    },
-  ];
+  const urlEntries = pages
+    .map((page) => {
+      const images =
+        page.images
+          ?.map(
+            (img) => `
+      <image:image>
+        <image:loc>${escapeXml(BASE + img.loc)}</image:loc>
+        <image:title>${escapeXml(img.title)}</image:title>
+        <image:caption>${escapeXml(img.caption)}</image:caption>
+      </image:image>`
+          )
+          .join("") || "";
 
-  // Only include existing pages
-  const allPages = [...mainPages, ...blogPosts];
-  
-  // Generate XML with mobile and image extensions
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  ${allPages.map(page => `
+      return `
   <url>
-    <loc>${baseUrl}${page.url}</loc>
+    <loc>${escapeXml(BASE + page.url)}</loc>
     <lastmod>${page.lastMod}</lastmod>
     <changefreq>${page.changeFreq}</changefreq>
-    <priority>${page.priority}</priority>
-    <mobile:mobile/>
-    ${page.images?.map(img => `
-    <image:image>
-      <image:loc>${baseUrl}${img.loc}</image:loc>
-      <image:title>${img.title}</image:title>
-      <image:caption>${img.caption}</image:caption>
-    </image:image>`).join('') || ''}
-  </url>
-  `).join('')}
+    <priority>${page.priority}</priority>${images}
+  </url>`;
+    })
+    .join("");
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+${urlEntries}
 </urlset>`;
 
-  return new NextResponse(sitemap, {
+  return new NextResponse(xml, {
     headers: {
-      'Content-Type': 'application/xml',
-      'Cache-Control': 'public, max-age=3600, s-maxage=86400'
-    }
+      "Content-Type": "application/xml; charset=utf-8",
+      "Cache-Control": "public, max-age=3600, s-maxage=86400",
+    },
   });
-} 
+}
