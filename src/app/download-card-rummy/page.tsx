@@ -123,7 +123,7 @@ export default function DownloadPage() {
 
         {/* Download Button - Prominent */}
         <div className="flex justify-center my-12">
-          <CtaButton>DOWNLOAD NOW</CtaButton>
+          <CtaButton href="/">DOWNLOAD NOW</CtaButton>
         </div>
 
         <div className="flex justify-center mb-8">
@@ -187,7 +187,7 @@ export default function DownloadPage() {
 
         {/* Download Button After Table */}
         <div className="flex justify-center mt-8">
-          <CtaButton>DOWNLOAD NOW</CtaButton>
+          <CtaButton href="/">DOWNLOAD NOW</CtaButton>
         </div>
       </section>
 
