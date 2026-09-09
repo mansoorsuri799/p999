@@ -153,11 +153,12 @@ export default function IsP999RealOrFakePage() {
 
         <div className="flex justify-center mb-12">
           <Image
-            src="/p999.webp"
+            src="/p999-logo.webp"
             alt="P999 official app logo used for checking genuine P999 sources"
             width={420}
             height={420}
             className="w-[240px] h-[240px] md:w-[320px] md:h-[320px] object-contain drop-shadow-2xl"
+            unoptimized
             priority
             sizes="(max-width: 768px) 240px, 320px"
           />

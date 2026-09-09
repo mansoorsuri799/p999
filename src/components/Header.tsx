@@ -31,11 +31,12 @@ export default function Header() {
         <Link href="/" className="flex items-center flex-shrink-0">
           <div className="relative h-10 w-10 mr-2">
             <Image
-              src="/p999.webp"
+              src="/p999-logo.webp"
               alt="P999 Game official logo"
               width={40}
               height={40}
               className="object-contain logo-clean"
+              unoptimized
               priority={true}
               fetchPriority="high"
             />

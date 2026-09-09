@@ -60,13 +60,14 @@ export default function AboutPage() {
               <div className="w-full md:w-1/3 flex-shrink-0 flex justify-center md:justify-start">
                 <Link href="/" className="block">
                   <Image
-                    src="/p999.webp"
+                    src="/p999-logo.webp"
                     alt="P999 official app logo"
                     title="About P999"
                     width={320}
                     height={320}
                     sizes="(max-width: 768px) 280px, 320px"
                     className="logo-clean object-contain drop-shadow-2xl w-[280px] h-[280px] md:w-[320px] md:h-[320px]"
+                    unoptimized
                     priority
                   />
                 </Link>

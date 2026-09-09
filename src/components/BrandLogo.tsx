@@ -35,7 +35,8 @@ export default function BrandLogo({
   return (
     <div className={`${SIZE_CLASS[size]} ${className}`.trim()}>
       <Image
-        src="/p999.webp"
+        src="/p999-logo.webp"
+        unoptimized
         alt={alt}
         width={px}
         height={px}

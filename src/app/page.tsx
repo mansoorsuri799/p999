@@ -7,7 +7,7 @@ import CtaButton from '@/components/CtaButton';
 import PhoneFrame from '@/components/PhoneFrame';
 
 const SITE_URL = 'https://p999gaming.com.pk';
-const LOGO_URL = `${SITE_URL}/p999.webp`;
+const LOGO_URL = `${SITE_URL}/p999-logo.webp`;
 const OG_IMAGE_URL = `${SITE_URL}/feature/og-image.webp`;
 const TWITTER_IMAGE_URL = `${SITE_URL}/feature/twitter-card.webp`;
 
@@ -447,12 +447,13 @@ export default function Home() {
             <meta itemProp="description" content="Official P999 app logo for Android gaming in Pakistan." />
             <meta itemProp="url" content={LOGO_URL} />
             <Image
-              src="/p999.webp"
+              src="/p999-logo.webp"
               alt="P999 official gaming app logo for Pakistan"
               title="P999 Game - Download APK for Android"
               width={320}
               height={320}
               className="logo-clean object-contain drop-shadow-2xl w-[260px] h-[260px] md:w-[320px] md:h-[320px]"
+              unoptimized
               priority
               fetchPriority="high"
               quality={90}
