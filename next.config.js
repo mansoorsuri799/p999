@@ -171,15 +171,6 @@ const nextConfig = {
       },
       // Public images: long cache but allow revalidation
       {
-        source: '/p999-logo.webp',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=0, must-revalidate',
-          },
-        ],
-      },
-      {
         source: '/:path*.webp',
         headers: [
           {

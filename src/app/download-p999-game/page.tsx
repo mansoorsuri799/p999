@@ -138,13 +138,12 @@ export default function DownloadP999Page() {
 
         <div className="flex justify-center mb-12">
           <Image
-            src="/p999-logo.webp"
+            src="/p999.webp"
             alt="P999 Game official app logo"
             title="P999 Game APK for Android"
             width={420}
             height={420}
             className="object-contain drop-shadow-2xl w-[260px] h-[260px] md:w-[320px] md:h-[320px]"
-            unoptimized
             priority
             fetchPriority="high"
             quality={90}

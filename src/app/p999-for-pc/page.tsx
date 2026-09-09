@@ -82,13 +82,12 @@ export default function P999ForPCPage() {
         </div>
         <div className="flex justify-center mb-12">
           <Image
-            src="/p999-logo.webp"
+            src="/p999.webp"
             alt="P999 app logo for PC emulator setup"
             title="P999 for PC"
             width={320}
             height={320}
             className="logo-clean object-contain drop-shadow-2xl w-[260px] h-[260px] md:w-[320px] md:h-[320px]"
-              unoptimized
             priority
             sizes="(max-width: 768px) 260px, 320px"
           />
