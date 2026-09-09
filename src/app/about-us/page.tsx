@@ -68,6 +68,7 @@ export default function AboutPage() {
                     sizes="(max-width: 768px) 280px, 320px"
                     className="logo-clean object-contain drop-shadow-2xl w-[280px] h-[280px] md:w-[320px] md:h-[320px]"
                     priority
+                    unoptimized
                   />
                 </Link>
               </div>
