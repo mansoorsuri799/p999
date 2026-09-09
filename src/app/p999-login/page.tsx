@@ -140,13 +140,13 @@ const schemaData = {
 
 export default function P999LoginPage() {
   return (
-    <article className="min-h-screen bg-primary">
+    <article className="min-h-screen bg-[#07160C]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData).replace(/</g, "\\u003c") }}
       />
 
-      <section className="relative py-12 md:py-20 bg-secondary border-b border-gray-800">
+      <section className="relative py-12 md:py-20 bg-[#07160C] border-b border-gray-800">
         <div className="container mx-auto px-4">
           <nav className="mb-8 text-sm text-gray-400 max-w-4xl mx-auto" aria-label="Breadcrumb">
             <ol className="flex flex-wrap items-center gap-2">
@@ -170,12 +170,6 @@ export default function P999LoginPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-md mx-auto sm:max-w-none">
               <CtaButton ariaLabel="Download P999 Game APK">Download P999</CtaButton>
-              <Link
-                href="/blog/p999-login-guide-pakistan"
-                className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 sm:px-6 sm:py-4 rounded-full border border-accent text-accent font-semibold text-sm sm:text-base hover:bg-accent/10 transition"
-              >
-                Read Full Login Blog
-              </Link>
             </div>
             <div className="mt-10 flex justify-center">
               <PhoneFrame
@@ -190,9 +184,9 @@ export default function P999LoginPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-secondary">
+      <section className="py-12 md:py-16 bg-[#07160C]">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="bg-[#07140C] rounded-2xl shadow-xl p-8 md:p-12 border border-accent/10">
+          <div className="bg-[#07160C] rounded-2xl shadow-xl p-8 md:p-12 border border-accent/10">
             <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6">What Is P999 Login?</h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
@@ -209,14 +203,14 @@ export default function P999LoginPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-secondary">
+      <section className="py-12 md:py-16 bg-[#07160C]">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl md:text-3xl font-bold text-accent mb-8 text-center">How to Login to P999</h2>
           <ol className="space-y-5">
             {loginSteps.map(([title, text], index) => (
-              <li key={title} className="bg-[#07140C] rounded-xl shadow-lg p-6 md:p-8 border border-gray-800">
+              <li key={title} className="bg-[#07160C] rounded-xl shadow-lg p-6 md:p-8 border border-gray-800">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-accent text-[#07140C] rounded-full flex items-center justify-center text-xl font-bold">
+                  <div className="flex-shrink-0 w-12 h-12 bg-accent text-[#07160C] rounded-full flex items-center justify-center text-xl font-bold">
                     {index + 1}
                   </div>
                   <div>
@@ -241,7 +235,7 @@ export default function P999LoginPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-secondary">
+      <section className="py-12 md:py-16 bg-[#07160C]">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="grid md:grid-cols-2 gap-8 items-center mb-10">
             <div>
@@ -267,7 +261,7 @@ export default function P999LoginPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-secondary">
+      <section className="py-12 md:py-16 bg-[#07160C]">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl md:text-3xl font-bold text-accent mb-8">Common P999 Login Problems & Fixes</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -297,7 +291,7 @@ export default function P999LoginPage() {
                 "Use Forgot Password, verify OTP, set a strong unique password, and never reuse wallet PINs as app passwords.",
               ],
             ].map(([title, text]) => (
-              <div key={title} className="bg-[#07140C] p-6 rounded-lg border-l-4 border-accent">
+              <div key={title} className="bg-[#07160C] p-6 rounded-lg border-l-4 border-accent">
                 <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
                 <p className="text-gray-300 leading-relaxed">{text}</p>
               </div>
@@ -306,9 +300,9 @@ export default function P999LoginPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-secondary">
+      <section className="py-12 md:py-16 bg-[#07160C]">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="bg-[#07140C] rounded-2xl p-8 md:p-12 border border-red-500/30">
+          <div className="bg-[#07160C] rounded-2xl p-8 md:p-12 border border-red-500/30">
             <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6">Avoid Fake P999 Login Pages</h2>
             <ul className="space-y-3 text-gray-300 leading-relaxed list-disc pl-5">
               <li>Start from p999gaming.com.pk — not random Telegram or WhatsApp APK files.</li>
@@ -330,12 +324,12 @@ export default function P999LoginPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-secondary">
+      <section className="py-12 md:py-16 bg-[#07160C]">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl md:text-3xl font-bold text-accent mb-8 text-center">P999 Login FAQs</h2>
           <div className="space-y-4">
             {faqs.map(([question, answer]) => (
-              <div key={question} className="bg-[#07140C] rounded-xl shadow-lg p-6 border border-gray-800">
+              <div key={question} className="bg-[#07160C] rounded-xl shadow-lg p-6 border border-gray-800">
                 <h3 className="text-lg font-semibold text-white mb-2">{question}</h3>
                 <p className="text-gray-300 leading-relaxed">{answer}</p>
               </div>
@@ -355,7 +349,7 @@ export default function P999LoginPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-secondary border-t border-gray-800">
+      <section className="py-12 md:py-16 bg-[#07160C] border-t border-gray-800">
         <div className="container mx-auto px-4 max-w-3xl text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-accent mb-4">Ready to Sign In?</h2>
           <p className="text-gray-300 mb-8">

@@ -157,19 +157,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
       },
     ],
   },
-  {
-    path: "/blog/p999-login-guide-pakistan",
-    lastMod: "2026-04-12",
-    changeFreq: "monthly",
-    priority: 0.85,
-    images: [
-      {
-        loc: `${SITE}/p999-login.webp`,
-        title: "P999 login guide blog",
-        caption: "Detailed P999 login OTP steps and troubleshooting for Pakistan.",
-      },
-    ],
-  },
 ];
 
 export function escapeXml(value: string): string {

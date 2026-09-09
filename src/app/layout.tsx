@@ -24,7 +24,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: "#07140C",
+  themeColor: "#07160C",
   viewportFit: "cover",
   interactiveWidget: "resizes-visual",
 };
@@ -146,7 +146,7 @@ export default function RootLayout({
         className={`${poppins.className} antialiased bg-primary text-white min-h-screen flex flex-col`}
         style={{
           backgroundImage:
-            "radial-gradient(circle at 10% 20%, rgba(45, 212, 111, 0.08) 0%, rgba(7, 20, 12, 0.01) 90%)",
+            "radial-gradient(circle at 10% 20%, rgba(45, 212, 111, 0.08) 0%, rgba(7, 22, 12, 0.01) 90%)",
           backgroundAttachment: "fixed",
           minHeight: "100vh",
         }}

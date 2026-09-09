@@ -384,15 +384,15 @@ function AccordionIcon() {
 
 export default function Home() {
   return (
-    <>
+    <div className="min-h-screen bg-[#07160C]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
 
       <section className="py-8 md:py-16 px-4 md:px-8 max-w-7xl mx-auto" style={{ minHeight: '420px' }}>
-        <div className="md:flex md:items-center md:justify-between md:gap-10 lg:gap-16">
-          <div className="md:w-1/2 space-y-6">
+        <div className="md:flex md:items-start md:justify-between md:gap-6 lg:gap-8">
+          <div className="md:w-[58%] space-y-6">
             <div className="space-y-4">
               <p className="text-accent font-semibold tracking-wide uppercase">Official P999 APK Guide</p>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white">
@@ -439,7 +439,7 @@ export default function Home() {
           </div>
 
           <figure
-            className="mt-8 md:mt-0 md:-mt-4 md:w-1/2 flex justify-center md:justify-end"
+            className="mt-8 md:mt-8 lg:mt-10 md:w-[42%] flex justify-center md:justify-end md:pl-4 lg:pl-8"
             itemScope
             itemType="https://schema.org/ImageObject"
           >
@@ -676,10 +676,6 @@ export default function Home() {
               Need the full walkthrough? Open the{" "}
               <Link href="/p999-login" className="text-accent hover:underline font-semibold">
                 P999 Login page
-              </Link>{" "}
-              or the detailed{" "}
-              <Link href="/blog/p999-login-guide-pakistan" className="text-accent hover:underline font-semibold">
-                login blog for Pakistan
               </Link>
               .
             </p>
@@ -914,6 +910,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         // P999 icon palette — deep forest green (no blue navy)
-        primary: '#07140C',
+        primary: '#07160C',
         secondary: '#0C1F14',
         accent: '#2DD46F',
       },

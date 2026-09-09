@@ -4,20 +4,12 @@ import { SITE_ORIGIN } from "@/lib/schemaImageLicensing";
 
 const posts = [
   {
-    title: "P999 Login Guide for Pakistan Players",
-    href: "/blog/p999-login-guide-pakistan",
-    excerpt:
-      "Detailed mobile OTP login steps, new vs existing users, OTP delay fixes, fake login pages, and account safety tips.",
-    date: "April 12, 2026",
-    featured: true,
-  },
-  {
     title: "Is P999 Real or Fake? Pakistan Player Check",
     href: "/blog/is-p999-game-real-or-fake",
     excerpt:
       "A practical trust check covering official-domain verification, withdrawal expectations, fake APK red flags, and responsible play.",
     date: "April 10, 2026",
-    featured: false,
+    featured: true,
   },
   {
     title: "P999 Bonuses, VIP Tiers and Redeem Codes",
@@ -155,6 +147,9 @@ export default function Blog() {
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <Link href="/download-p999-game" className="text-accent hover:underline">
               Download P999 Game
+            </Link>
+            <Link href="/p999-login" className="text-accent hover:underline">
+              P999 Login
             </Link>
             <Link href="/deposit-money-in-p999" className="text-accent hover:underline">
               Deposit Money in P999

@@ -33,6 +33,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/blog/p999-login-guide-pakistan',
+        destination: '/p999-login',
+        permanent: true,
+      },
+      {
         source: '/download-card-rummy',
         destination: '/download-p999-game',
         permanent: true,

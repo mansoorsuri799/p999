@@ -68,11 +68,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog/p999-login-guide-pakistan" className="text-gray-300 hover:text-accent transition-colors">
-                  Login Guide Blog
-                </Link>
-              </li>
-              <li>
                 <Link href="/blog/is-p999-game-real-or-fake" className="text-gray-300 hover:text-accent transition-colors">
                   Is P999 Real or Fake?
                 </Link>
