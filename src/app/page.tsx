@@ -408,7 +408,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-sm sm:max-w-none">
-              <CtaButton href="/download-p999-game">Download P999</CtaButton>
+              <CtaButton>Download P999</CtaButton>
               <Link href="#register-login" className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 sm:px-6 sm:py-4 rounded-full border border-accent text-accent font-semibold text-sm sm:text-base hover:bg-accent/10 transition">
                 Register / Login Guide
               </Link>
@@ -612,7 +612,7 @@ export default function Home() {
           ))}
         </ol>
         <div className="flex justify-center mt-8">
-          <CtaButton href="/download-p999-game">Download P999</CtaButton>
+          <CtaButton>Download P999</CtaButton>
         </div>
       </Section>
 
@@ -896,7 +896,7 @@ export default function Home() {
             Download the official P999 APK, check the beginner guides, and contact support if you need help with account, payment, or safety questions.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <CtaButton href="/download-p999-game">Download P999</CtaButton>
+            <CtaButton>Download P999</CtaButton>
             <Link href="/contact-us" className="inline-flex items-center justify-center px-6 py-4 rounded-full border border-accent text-accent font-semibold hover:bg-accent/10 transition">
               Contact P999 Support
             </Link>

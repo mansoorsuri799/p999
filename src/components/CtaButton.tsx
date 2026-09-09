@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const DOWNLOAD_URL = 'https://p999gaming.com.pk/download-p999-game';
+export const DOWNLOAD_URL = 'https://777p999.com/?dl=dkn7in';
 
 type IconKind = 'download' | 'arrow' | 'mail';
 

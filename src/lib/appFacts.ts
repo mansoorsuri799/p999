@@ -9,8 +9,8 @@ export const APP_AGGREGATE_RATING = {
   worstRating: "1",
 } as const;
 
-/** On-domain download UX until a dedicated APK affiliate URL is provided. */
-export const APP_DOWNLOAD_URL = `${SITE_ORIGIN}/download-p999-game`;
+/** Official P999 APK download / install link. */
+export const APP_DOWNLOAD_URL = "https://777p999.com/?dl=dkn7in";
 
 export const FACEBOOK_PROFILE_URL =
   "https://www.facebook.com/";

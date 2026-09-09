@@ -337,7 +337,7 @@ export default function P999BeginnerGuidePakistanPage() {
           <p className="text-gray-300 max-w-3xl mx-auto mb-8">
             Your first P999 session should be slow, verified, and budgeted. Begin with the official download page, then read the wallet guides before adding money.
           </p>
-          <CtaButton href="/download-p999-game" ariaLabel="Open P999 beginner download route">
+          <CtaButton ariaLabel="Open P999 beginner download route">
             DOWNLOAD P999 APK
           </CtaButton>
         </div>

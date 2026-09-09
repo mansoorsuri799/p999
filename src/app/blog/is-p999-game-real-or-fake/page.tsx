@@ -275,7 +275,7 @@ export default function IsP999RealOrFakePage() {
           <p className="text-gray-300 max-w-3xl mx-auto mb-8">
             Use the official download route, keep your OTP private, and read the payment guides before adding money. A careful first step is better than a rushed deposit from an unknown APK link.
           </p>
-          <CtaButton href="/download-p999-game" ariaLabel="Open official P999 download guide">
+          <CtaButton ariaLabel="Open official P999 download guide">
             DOWNLOAD P999 APK
           </CtaButton>
         </div>

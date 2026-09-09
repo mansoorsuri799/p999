@@ -299,7 +299,7 @@ export default function IsP999SafeToPlayPakistanPage() {
           <p className="text-gray-300 max-w-3xl mx-auto mb-8">
             Install from the official guide, keep OTPs private, check wallet details carefully, and contact support through trusted pages if you need help.
           </p>
-          <CtaButton href="/download-p999-game" ariaLabel="Download P999 safely from the official guide">
+          <CtaButton ariaLabel="Download P999 safely from the official guide">
             DOWNLOAD P999 APK
           </CtaButton>
         </div>

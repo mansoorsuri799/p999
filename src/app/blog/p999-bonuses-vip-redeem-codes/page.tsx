@@ -295,7 +295,7 @@ export default function P999BonusesVipRedeemCodesPage() {
           <p className="text-gray-300 max-w-3xl mx-auto mb-8">
             Bonuses can be useful, but the official download and guide pages matter first. Install safely, protect your account, and treat rewards as extras rather than income.
           </p>
-          <CtaButton href="/download-p999-game" ariaLabel="Open P999 download guide">
+          <CtaButton ariaLabel="Open P999 download guide">
             DOWNLOAD P999 APK
           </CtaButton>
         </div>
