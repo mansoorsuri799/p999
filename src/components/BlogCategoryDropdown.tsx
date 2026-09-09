@@ -7,6 +7,7 @@ const BlogCategoryDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const categories = [
+    { name: 'P999 Login', href: '/blog/p999-login-guide-pakistan' },
     { name: 'Real or Fake', href: '/blog/is-p999-game-real-or-fake' },
     { name: 'Bonuses & VIP', href: '/blog/p999-bonuses-vip-redeem-codes' },
     { name: 'Safety in Pakistan', href: '/blog/is-p999-safe-to-play-pakistan' },

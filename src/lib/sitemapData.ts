@@ -49,6 +49,19 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     ],
   },
   {
+    path: "/p999-login",
+    lastMod: "2026-04-12",
+    changeFreq: "weekly",
+    priority: 0.9,
+    images: [
+      {
+        loc: `${SITE}/p999-login.webp`,
+        title: "P999 Login Guide",
+        caption: "How to login to P999 Game with mobile number and OTP in Pakistan.",
+      },
+    ],
+  },
+  {
     path: "/deposit-money-in-p999",
     lastMod: "2026-04-10",
     changeFreq: "weekly",
@@ -141,6 +154,19 @@ export const SITEMAP_PAGES: SitemapPage[] = [
         loc: `${SITE}/p999-register.webp`,
         title: "P999 beginner registration",
         caption: "Beginner guide to start P999 Game safely in Pakistan.",
+      },
+    ],
+  },
+  {
+    path: "/blog/p999-login-guide-pakistan",
+    lastMod: "2026-04-12",
+    changeFreq: "monthly",
+    priority: 0.85,
+    images: [
+      {
+        loc: `${SITE}/p999-login.webp`,
+        title: "P999 login guide blog",
+        caption: "Detailed P999 login OTP steps and troubleshooting for Pakistan.",
       },
     ],
   },

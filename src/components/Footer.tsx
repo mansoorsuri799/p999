@@ -27,6 +27,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/p999-login" className="text-gray-300 hover:text-accent transition-colors">
+                  P999 Login
+                </Link>
+              </li>
+              <li>
                 <Link href="/p999-for-pc" className="text-gray-300 hover:text-accent transition-colors">
                   PC Version
                 </Link>
@@ -60,6 +65,11 @@ export default function Footer() {
               <li>
                 <Link href="/withdraw-money-from-p999" className="text-gray-300 hover:text-accent transition-colors">
                   Withdraw Guide
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/p999-login-guide-pakistan" className="text-gray-300 hover:text-accent transition-colors">
+                  Login Guide Blog
                 </Link>
               </li>
               <li>

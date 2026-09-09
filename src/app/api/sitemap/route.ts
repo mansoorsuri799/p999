@@ -38,6 +38,19 @@ const mainPages: PageType[] = [
       },
     ],
   },
+  {
+    url: "/p999-login",
+    lastMod: "2026-04-12",
+    changeFreq: "weekly",
+    priority: 0.9,
+    images: [
+      {
+        loc: "/p999-login.webp",
+        title: "P999 Login Guide",
+        caption: "Login to P999 with mobile number and OTP.",
+      },
+    ],
+  },
   { url: "/deposit-money-in-p999", lastMod: TODAY, changeFreq: "weekly", priority: 0.9 },
   { url: "/withdraw-money-from-p999", lastMod: TODAY, changeFreq: "weekly", priority: 0.9 },
   {
@@ -66,6 +79,7 @@ const mainPages: PageType[] = [
 ];
 
 const blogPosts: PageType[] = [
+  { url: "/blog/p999-login-guide-pakistan", lastMod: "2026-04-12", changeFreq: "monthly", priority: 0.85 },
   { url: "/blog/is-p999-game-real-or-fake", lastMod: "2026-04-10", changeFreq: "monthly", priority: 0.8 },
   { url: "/blog/p999-bonuses-vip-redeem-codes", lastMod: "2026-04-10", changeFreq: "monthly", priority: 0.8 },
   { url: "/blog/is-p999-safe-to-play-pakistan", lastMod: "2026-04-11", changeFreq: "monthly", priority: 0.8 },

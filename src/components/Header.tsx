@@ -8,6 +8,7 @@ import MobileNavigation from './MobileNavigation';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/download-p999-game', label: 'Download' },
+  { href: '/p999-login', label: 'Login' },
   { href: '/deposit-money-in-p999', label: 'Deposit' },
   { href: '/withdraw-money-from-p999', label: 'Withdraw' },
   { href: '/p999-for-pc', label: 'PC Version' },

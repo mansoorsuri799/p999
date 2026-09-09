@@ -409,8 +409,8 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-sm sm:max-w-none">
               <CtaButton>Download P999</CtaButton>
-              <Link href="#register-login" className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 sm:px-6 sm:py-4 rounded-full border border-accent text-accent font-semibold text-sm sm:text-base hover:bg-accent/10 transition">
-                Register / Login Guide
+              <Link href="/p999-login" className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 sm:px-6 sm:py-4 rounded-full border border-accent text-accent font-semibold text-sm sm:text-base hover:bg-accent/10 transition">
+                P999 Login Guide
               </Link>
             </div>
 
@@ -672,6 +672,17 @@ export default function Home() {
               <li>Use Forgot Password if you cannot remember your password.</li>
               <li>After login, open the account page to confirm your wallet and security details.</li>
             </ol>
+            <p className="text-gray-300 pt-2">
+              Need the full walkthrough? Open the{" "}
+              <Link href="/p999-login" className="text-accent hover:underline font-semibold">
+                P999 Login page
+              </Link>{" "}
+              or the detailed{" "}
+              <Link href="/blog/p999-login-guide-pakistan" className="text-accent hover:underline font-semibold">
+                login blog for Pakistan
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </Section>
