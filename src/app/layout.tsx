@@ -135,7 +135,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="256x256" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="/p999.webp" type="image/webp" sizes="512x512" />
+        <link rel="icon" href="/p999.webp" type="image/webp" sizes="1024x1024" />
         <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180" />
 
         <Script id="deferred-manifest" strategy="lazyOnload">
