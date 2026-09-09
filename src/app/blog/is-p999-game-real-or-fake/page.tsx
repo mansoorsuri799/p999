@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: `${SITE_ORIGIN}/p999.webp`,
-        width: 512,
-        height: 512,
+        width: 1024,
+        height: 1024,
         alt: "P999 official logo for real or fake safety checks",
       },
     ],

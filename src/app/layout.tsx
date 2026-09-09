@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", type: "image/x-icon", sizes: "256x256" },
-      { url: "/p999.webp", type: "image/webp", sizes: "512x512" },
+      { url: "/p999.webp", type: "image/webp", sizes: "1024x1024" },
     ],
     apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
     shortcut: [{ url: "/favicon.ico", type: "image/x-icon" }],
@@ -92,14 +92,14 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://p999gaming.com.pk/feature/og-image.webp",
-        width: 512,
-        height: 512,
+        width: 1024,
+        height: 1024,
         alt: "P999 Game – Real money gaming app for Pakistan",
       },
       {
         url: "https://p999gaming.com.pk/feature/og-image-square.webp",
-        width: 512,
-        height: 512,
+        width: 1024,
+        height: 1024,
         alt: "P999 Game official logo",
       },
     ],
@@ -112,8 +112,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://p999gaming.com.pk/feature/twitter-card.webp",
-        width: 512,
-        height: 512,
+        width: 1024H24,
         alt: "P999 Game – Real money gaming app for Pakistan",
       },
     ],
