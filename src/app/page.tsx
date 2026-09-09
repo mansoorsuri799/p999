@@ -311,7 +311,8 @@ export const metadata: Metadata = {
       },
       {
         url: OG_IMAGE_URL,
-        width: 1024H24,
+        width: 1024,
+        height: 1024,
         alt: 'P999 Game homepage preview for Pakistan',
       },
     ],

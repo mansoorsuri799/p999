@@ -112,7 +112,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://p999gaming.com.pk/feature/twitter-card.webp",
-        width: 1024H24,
+        width: 1024,
+        height: 1024,
         alt: "P999 Game – Real money gaming app for Pakistan",
       },
     ],
