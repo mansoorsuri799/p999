@@ -24,7 +24,7 @@ export default function BlogPostSchema({
   slug,
   datePublished,
   dateModified,
-  image = `${BASE}/p999-icon.webp`,
+  image = `${BASE}/p999.webp`,
   breadcrumbOnly = false,
   articleBody,
 }: BlogPostSchemaProps) {
@@ -52,7 +52,7 @@ export default function BlogPostSchema({
       name: "P999",
       logo: {
         "@type": "ImageObject",
-        url: `${BASE}/p999-icon.webp`,
+        url: `${BASE}/p999.webp`,
         ...imageObjectLicensing,
         creditText: "P999 logo",
       },

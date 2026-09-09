@@ -37,12 +37,12 @@ const schemaData = {
   "@type": "TechArticle",
   headline: "P999 for PC Download Guide",
   description: "Guide to run P999 on Windows using Android emulators such as BlueStacks or LDPlayer.",
-  image: `${SITE_ORIGIN}/p999-icon.webp`,
+  image: `${SITE_ORIGIN}/p999.webp`,
   author: { "@type": "Organization", name: "P999", url: SITE_ORIGIN },
   publisher: {
     "@type": "Organization",
     name: "P999",
-    logo: { "@type": "ImageObject", url: `${SITE_ORIGIN}/p999-icon.webp`, ...imageObjectLicensing },
+    logo: { "@type": "ImageObject", url: `${SITE_ORIGIN}/p999.webp`, ...imageObjectLicensing },
   },
   mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
   about: { "@type": "SoftwareApplication", name: "P999", operatingSystem: "Android emulator on Windows" },
@@ -82,12 +82,12 @@ export default function P999ForPCPage() {
         </div>
         <div className="flex justify-center mb-12">
           <Image
-            src="/p999-icon.webp"
+            src="/p999.webp"
             alt="P999 app logo for PC emulator setup"
             title="P999 for PC"
             width={320}
             height={320}
-            className="object-contain drop-shadow-2xl w-[260px] h-[260px] md:w-[320px] md:h-[320px]"
+            className="logo-clean object-contain drop-shadow-2xl w-[260px] h-[260px] md:w-[320px] md:h-[320px]"
             priority
             sizes="(max-width: 768px) 260px, 320px"
           />

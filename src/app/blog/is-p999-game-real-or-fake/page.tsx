@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     publishedTime: datePublished,
     images: [
       {
-        url: `${SITE_ORIGIN}/p999-icon.webp`,
+        url: `${SITE_ORIGIN}/p999.webp`,
         width: 512,
         height: 512,
         alt: "P999 official logo for real or fake safety checks",
@@ -117,7 +117,7 @@ export default function IsP999RealOrFakePage() {
         description={description}
         slug={slug}
         datePublished={datePublished}
-        image={`${SITE_ORIGIN}/p999-icon.webp`}
+        image={`${SITE_ORIGIN}/p999.webp`}
         articleBody={articleBody}
       />
       <JsonLd data={faqSchema} />
@@ -153,7 +153,7 @@ export default function IsP999RealOrFakePage() {
 
         <div className="flex justify-center mb-12">
           <Image
-            src="/p999-icon.webp"
+            src="/p999.webp"
             alt="P999 official app logo used for checking genuine P999 sources"
             width={420}
             height={420}

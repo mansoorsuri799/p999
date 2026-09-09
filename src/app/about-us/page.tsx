@@ -59,18 +59,16 @@ export default function AboutPage() {
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-20 mb-8">
               <div className="w-full md:w-1/3 flex-shrink-0 flex justify-center md:justify-start">
                 <Link href="/" className="block">
-                  <div className="relative w-[280px] h-[280px] md:w-[320px] md:h-[320px] mx-auto md:mx-0 rounded-lg overflow-hidden bg-[#07140C]">
-                    <Image
-                      src="/p999-icon.webp"
-                      alt="P999 official app logo"
-                      title="About P999"
-                      width={320}
-                      height={320}
-                      sizes="(max-width: 768px) 280px, 320px"
-                      className="object-contain p-4 w-full h-full"
-                      priority
-                    />
-                  </div>
+                  <Image
+                    src="/p999.webp"
+                    alt="P999 official app logo"
+                    title="About P999"
+                    width={320}
+                    height={320}
+                    sizes="(max-width: 768px) 280px, 320px"
+                    className="logo-clean object-contain drop-shadow-2xl w-[280px] h-[280px] md:w-[320px] md:h-[320px]"
+                    priority
+                  />
                 </Link>
               </div>
               <div className="md:w-2/3 md:pl-4 lg:pl-6">

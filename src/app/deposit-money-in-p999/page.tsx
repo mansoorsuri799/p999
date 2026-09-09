@@ -57,7 +57,7 @@ const schemaData = {
       publisher: {
         "@type": "Organization",
         name: "P999",
-        logo: { "@type": "ImageObject", url: `${SITE_ORIGIN}/p999-icon.webp`, ...imageObjectLicensing },
+        logo: { "@type": "ImageObject", url: `${SITE_ORIGIN}/p999.webp`, ...imageObjectLicensing },
       },
       mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
       inLanguage: "en-US",
