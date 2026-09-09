@@ -106,9 +106,9 @@ footer {
   display: block;
 }
 
-/* Logo: match page bg so rounded corners never show grey/white fringe */
+/* Logo: hide any residual fringe against dark pages */
 .logo-clean {
-  background: #07160C;
-  border-radius: 1.5rem;
+  background: transparent;
+  border-radius: 1.25rem;
   overflow: hidden;
 } 

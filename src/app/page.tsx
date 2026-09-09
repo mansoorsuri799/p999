@@ -455,8 +455,7 @@ export default function Home() {
               className="logo-clean object-contain drop-shadow-2xl w-[260px] h-[260px] md:w-[320px] md:h-[320px]"
               priority
               fetchPriority="high"
-              quality={100}
-              unoptimized
+              quality={90}
               sizes="(max-width: 768px) 260px, 320px"
               itemProp="image"
             />
