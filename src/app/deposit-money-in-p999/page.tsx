@@ -93,11 +93,11 @@ const breadcrumbData = {
 
 export default function DepositMoneyInP999Page() {
   return (
-    <article className="min-h-screen bg-primary" itemScope itemType="https://schema.org/Article">
+    <article className="min-h-screen bg-[#07150C]" itemScope itemType="https://schema.org/Article">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData).replace(/</g, "\\u003c") }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData).replace(/</g, "\\u003c") }} />
 
-      <section className="relative py-12 md:py-20 bg-secondary border-b border-gray-800">
+      <section className="relative py-12 md:py-20 bg-[#07150C] border-b border-gray-800">
         <div className="container mx-auto px-4">
           <nav className="mb-8 text-sm text-gray-400 max-w-4xl mx-auto" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-accent">Home</Link>
@@ -130,7 +130,7 @@ export default function DepositMoneyInP999Page() {
 
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto bg-secondary rounded-2xl shadow-xl p-8 md:p-12">
+          <div className="max-w-4xl mx-auto bg-[#07150C] rounded-2xl shadow-xl p-8 md:p-12">
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
               P999 lets Pakistani players add funds through familiar mobile wallets. Before depositing, confirm you are using the official P999 app, keep your wallet number active, and never share your JazzCash or EasyPaisa PIN with anyone.
             </p>
@@ -141,15 +141,15 @@ export default function DepositMoneyInP999Page() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-secondary">
+      <section className="py-12 md:py-16 bg-[#07150C]">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">P999 Deposit Steps</h2>
             <ol className="space-y-8 list-none">
               {steps.map(([name, text], index) => (
-                <li key={name} className="bg-[#07140C] rounded-xl shadow-lg p-8">
+                <li key={name} className="bg-[#07150C] rounded-xl shadow-lg p-8 border border-accent/15">
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-12 h-12 bg-accent text-[#07140C] rounded-full flex items-center justify-center text-xl font-bold mr-6" aria-hidden="true">{index + 1}</div>
+                    <div className="flex-shrink-0 w-12 h-12 bg-accent text-[#07150C] rounded-full flex items-center justify-center text-xl font-bold mr-6" aria-hidden="true">{index + 1}</div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-3">{name}</h3>
                       <p className="text-gray-300 leading-relaxed">{text}</p>
@@ -166,7 +166,7 @@ export default function DepositMoneyInP999Page() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Deposit Not Showing?</h2>
-            <div className="bg-secondary rounded-2xl shadow-xl p-8 md:p-12">
+            <div className="bg-[#07150C] rounded-2xl shadow-xl p-8 md:p-12">
               <ul className="space-y-4 text-lg text-gray-300">
                 <li>Confirm the wallet payment was successful and not just pending.</li>
                 <li>Refresh the P999 wallet screen or sign out and sign in again.</li>
@@ -179,13 +179,13 @@ export default function DepositMoneyInP999Page() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-secondary">
+      <section className="py-12 md:py-16 bg-[#07150C]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Frequently Asked Questions</h2>
             <div className="space-y-6">
               {faqs.map(([question, answer]) => (
-                <div key={question} className="bg-[#07140C] rounded-xl shadow-lg p-6">
+                <div key={question} className="bg-[#07150C] rounded-xl shadow-lg p-6 border border-accent/15">
                   <h3 className="text-xl font-bold text-accent mb-3">{question}</h3>
                   <p className="text-gray-300 leading-relaxed">{answer}</p>
                 </div>
